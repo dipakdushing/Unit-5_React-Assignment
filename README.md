@@ -1,2 +1,2 @@
-# Unit-5_React-Assignment
-In this repo i add all React assignment.
+# Unit5-React
+In this repo I will upload all the assignments related to React.
