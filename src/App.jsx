@@ -1,22 +1,26 @@
-import { useState } from 'react'
 
-import './App.css'
-import { Button } from './components/button'
+import { useDispatch, useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Counter } from './components/Counter';
+import { ShowTodo } from './components/ShowTodo';
+import { Todo } from './components/Todo';
+import { addCount } from './Redx/action';
+import { store } from './Redx/store';
+
 
 function App() {
 
-  
-  const [border, setborder] = useState("true")
-
   return (
     <div className="App">
-     <Button bg={border}>Primary Button</Button> 
-    <Button>Default button</Button>
-    <Button dot={border}>Dashed button</Button>
-    <Button b={border}>Text button</Button>
-    <Button color={border} b={border}>Link button</Button>
+     
+
+     <Routes>
+       <Route path="/" element={<Todo/>}>  </Route>
+       <Route path="/todo/:id" element={<ShowTodo></ShowTodo>}></Route>
+     </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
